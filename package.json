@@ -1,0 +1,23 @@
+{
+  "name": "spinettaeterno",
+  "version": "1.0.0",
+  "description": "Una landing page para celebrar la obra del músico argentino Luis Alberto Spinetta",
+  "main": "index.js",
+  "scripts": {
+    "deploy gh-pages": "gh-pages -d src"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/juanjomayotte/spinettaeterno.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/juanjomayotte/spinettaeterno/issues"
+  },
+  "homepage": "https://github.com/juanjomayotte/spinettaeterno#readme",
+  "devDependencies": {
+    "gh-pages": "^5.0.0"
+  }
+}
