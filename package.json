@@ -19,5 +19,8 @@
   "homepage": "https://github.com/juanjomayotte/spinettaeterno#readme",
   "devDependencies": {
     "gh-pages": "^5.0.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3"
   }
 }

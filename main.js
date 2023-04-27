@@ -1,6 +1,6 @@
 const API = 'https://youtube-v31.p.rapidapi.com/search?channelId=UCKe55fEovzVU4kU5w9Yg4wA&part=snippet%2Cid&order=date&maxResults=9';
 
-const content = null || document.getElementById('content');
+const videoList = null || document.getElementById('videoList');
 
 const options = {
 	method: 'GET',
@@ -11,7 +11,7 @@ const options = {
 	}
 };
 
-async function fetchData (urlApi) {
+async function fetchVideos (urlApi) {
     const response = await fetch(urlApi, options);
     const data = await response.json();
     return data;
@@ -19,7 +19,7 @@ async function fetchData (urlApi) {
 //una funcion que se llama a sí misma
 (async ()=>{
     try {
-        const videos = await fetchData(API);
+        const videos = await fetchVideos(API);
         let view = `${videos.items.map(video=>`
         <div class="group relative">
             <div
@@ -36,7 +36,7 @@ async function fetchData (urlApi) {
         </div>        
         `).slice(0,6).join('')}
         `;
-        content.innerHTML = view;
+        videoList.innerHTML = view;
     } catch (error) {
         console.log(error);
     }
